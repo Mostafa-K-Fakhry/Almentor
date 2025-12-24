@@ -484,18 +484,15 @@ body {
 }
 
 .main-tab {
-  background: #1f1f1f;
-  border: 1px solid #333;
-  color: #fff;
-  padding: 6px 18px;
-  border-radius: 20px;
+    background: transparent;
+  border: none;
+  color: #F2F2F2;
   font-size: 14px;
   cursor: pointer;
 }
 
 .main-tab.active {
-  border-color: #EB2027;
-  color: #EB2027;
+    text-decoration: solid 1px underline #EB2027;
 }
 
 .sub-tabs {
@@ -504,11 +501,14 @@ body {
 }
 
 .sub-tab {
-  background: transparent;
-  border: none;
-  color: #aaa;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
+  width: max-content;
 }
 
 .sub-tab.active {
@@ -622,7 +622,72 @@ body {
   border-radius: 5px;
   margin: 0 4px;
 }
-
 .custom-indicators .active {
   background-color: red;
+}
+.btn-show {
+  display: flex;
+  justify-content: center;
+}
+/* ////////////////////////////////////////////////// */
+/*testmonial section */
+.testimonials-section {
+  background: #000;
+  direction: rtl;
+}
+
+/* title */
+.testimonials-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+  display: flex;
+  justify-content: start;
+}
+
+/* card */
+.testimonial-card {
+  background-color: #141717;
+  border-radius: 14px;
+  padding: 20px;
+  height: 100%;
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: #1d1d1d;
+}
+
+/* stars */
+.stars {
+  color: #ff9f43;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* course title */
+.course-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #eaeaea;
+}
+
+/* text */
+.testimonial-text {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #d1d1d1;
+  margin-bottom: 15px;
+}
+
+/* name */
+.user-name {
+  font-weight: bold;
+  color: #fff;
+  font-size: 15px;
+}
+.sec-bg {
+  background-color: #101010;
 }
