@@ -1,393 +1,1040 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Almentor Replica</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <main>
-      <!-- start nav  -->
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid px-3 px-xl-5 align-items-center h-100">
-          <div class="d-flex align-items-center">
-            <button
-              class="navbar-toggler border-0 text-white me-2"
-              type="button"
-            >
-              <i class="fa-solid fa-bars fs-4"></i>
-            </button>
 
-            <a class="navbar-brand ms-3" href="#">
-              <img
-                src="assets/images/logo.svg"
-                class="navbar-logo"
-                alt="Almentor"
-              />
-            </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Almentor Replica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-            <ul
-              class="navbar-nav ms-2 d-none d-xl-flex align-items-center gap-4 ps-4"
-            >
-              <li class="nav-item dropdown">
-                <a class="nav-link text-white fw-bold fs-16" href="#"
-                  >الدورات التدريبية
-                  <i class="fa-solid fa-chevron-down fs-10 ms-1 opacity-75"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold fs-16" href="#"
-                  >الخبراء</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fw-bold fs-16" href="#"
-                  >برامج التعلم</a
-                >
-              </li>
-              <li class="nav-item ms-2">
-                <a href="#" class="btn btn-subscribe">اشترك</a>
-              </li>
-            </ul>
-          </div>
+<body>
+  <main>
+    <!-- start nav  -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid px-3 px-xl-5 align-items-center h-100">
+        <div class="d-flex align-items-center">
+          <button class="navbar-toggler border-0 text-white me-2" type="button">
+            <i class="fa-solid fa-bars fs-4"></i>
+          </button>
 
-          <div class="d-flex align-items-center ms-auto gap-3">
-            <div class="search-container d-none d-lg-block">
-              <input
-                type="text"
-                class="form-control search-input"
-                placeholder="ابحث عن دورات تدريبية، موضوعات"
-              />
-              <i class="fa-solid fa-magnifying-glass search-icon"></i>
-            </div>
+          <a class="navbar-brand ms-3" href="#">
+            <img src="assets/images/logo.svg" class="navbar-logo" alt="Almentor" />
+          </a>
 
-            <div class="vertical-divider d-none d-lg-block"></div>
-
-            <div class="d-flex align-items-center gap-2">
-              <div class="icon-circle d-none d-md-flex" title="Language">
-                <span class="fw-bold fs-12 text-white">EN</span>
-              </div>
-              <div class="icon-circle d-none d-md-flex" title="Theme">
-                <i class="fa-solid fa-circle-half-stroke text-white fs-6"></i>
-              </div>
-            </div>
-
-            <a
-              href="#"
-              class="text-white fw-bold text-decoration-none fs-16 text-nowrap mx-1 hover-opacity"
-            >
-              تسجيل دخول
-            </a>
-
-            <a href="#" class="btn btn-register text-nowrap">
-              إنشاء حساب جديد
-            </a>
-          </div>
+          <ul class="navbar-nav ms-2 d-none d-xl-flex align-items-center gap-4 ps-4">
+            <li class="nav-item dropdown">
+              <a class="nav-link text-white fw-bold fs-16" href="#">الدورات التدريبية
+                <i class="fa-solid fa-chevron-down fs-10 ms-1 opacity-75"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-bold fs-16" href="#">الخبراء</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-bold fs-16" href="#">برامج التعلم</a>
+            </li>
+            <li class="nav-item ms-2">
+              <a href="#" class="btn btn-subscribe">اشترك</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <!-- start hero  -->
-      <header class="hero-section d-flex align-items-center">
-        <div class="container">
-          <div class="row align-items-center flex-column-reverse flex-lg-row">
-            <div class="text-center text-lg-end">
-              <div class="hero-content">
-                <h1 class="hero-title">
-                  استثمر في مستقبلك،<br />
-                  تعلم في أي وقت وأي مكان
-                </h1>
-                <p class="hero-subtitle">
-                  مستعد للتعلم؟ انضم إلى آلاف المتعلمين اليوم.
-                </p>
-                <a href="#" class="btn btn-hero"> اشترك الآن </a>
-              </div>
-            </div>
 
-            <div class="col-lg-9">
-              <div class="hero-image-wrapper">
-                <img
-                  src="assets/images/hero-desktop.png"
-                  alt="Almentor Hero"
-                  class="img-fluid hero-img"
-                />
-              </div>
+        <div class="d-flex align-items-center ms-auto gap-3">
+          <div class="search-container d-none d-lg-block">
+            <input type="text" class="form-control search-input" placeholder="ابحث عن دورات تدريبية، موضوعات" />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+
+          <div class="vertical-divider d-none d-lg-block"></div>
+
+          <div class="d-flex align-items-center gap-2">
+            <div class="icon-circle d-none d-md-flex" title="Language">
+              <span class="fw-bold fs-12 text-white">EN</span>
+            </div>
+            <div class="icon-circle d-none d-md-flex" title="Theme">
+              <i class="fa-solid fa-circle-half-stroke text-white fs-6"></i>
+            </div>
+          </div>
+
+          <a href="#" class="text-white fw-bold text-decoration-none fs-16 text-nowrap mx-1 hover-opacity">
+            تسجيل دخول
+          </a>
+
+          <a href="#" class="btn btn-register text-nowrap">
+            إنشاء حساب جديد
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- start hero  -->
+    <header class="hero-section d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center flex-column-reverse flex-lg-row">
+          <div class="text-center text-lg-end">
+            <div class="hero-content">
+              <h1 class="hero-title">
+                استثمر في مستقبلك،<br />
+                تعلم في أي وقت وأي مكان
+              </h1>
+              <p class="hero-subtitle">
+                مستعد للتعلم؟ انضم إلى آلاف المتعلمين اليوم.
+              </p>
+              <a href="#" class="btn btn-hero"> اشترك الآن </a>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="hero-image-wrapper">
+              <img src="assets/images/hero-desktop.png" alt="Almentor Hero" class="img-fluid hero-img" />
             </div>
           </div>
         </div>
-      </header>
-      <!-- Start courses  -->
-      <section class="courses-section py-5 position-relative" dir="rtl">
-        <div class="container">
-          <div class="row mb-4">
-            <div class="col-12">
-              <h2 class="section-title text-white fw-bold">
-                الدورات المميزة هذا الأسبوع
-              </h2>
-            </div>
-          </div>
+      </div>
+    </header>
+    <!-- Start courses  -->
+    <section class="courses-section py-5 position-relative" ">
+        <div class=" container">
+      <div class="row mb-4">
+        <div class="col-12">
+          <h2 class="section-title text-white fw-bold">
+            الدورات المميزة هذا الأسبوع
+          </h2>
+        </div>
+      </div>
 
-          <div class="row position-relative">
-            <button class="btn-carousel btn-prev" id="btnPrev">
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
+      <div class="row position-relative">
+        <button class="btn-carousel btn-prev" id="btnPrev">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
 
-            <div class="carousel-viewport" id="carouselViewport">
-              <div class="carousel-track" id="track">
-                <div class="course-item">
-                  <div class="course-card">
-                    <div class="card-image-wrapper">
-                      <img
-                        src="assets/images/courses/course1.webp"
-                        class="card-img-top"
-                        alt="Course"
-                      />
-                    </div>
-                    <div class="card-body">
-                      <div
-                        class="course-category d-flex justify-content-between"
-                      >
-                        <p>مهارات التوظيف</p>
-                        <div class="course-rate d-flex">
-                          <i class="fa-regular fa-star pe-2 pt-1"></i>
-                          <p>٤٫٨ (٢٫٦ألف+ تسجيل)</p>
-                        </div>
-                      </div>
-
-                      <h5 class="course-title">إتقان مقابلات العمل</h5>
-                      <div class="rating-wrapper pb-5">
-                        <i class="fa-regular fa-clock"></i>
-                        <span class="rating-count"> ٤٧د </span>
-                      </div>
-                      <div
-                        class="instructor-name d-flex justify-content-between"
-                      >
-                        <span> وائل الفخراني </span>
-                        <div class="book-mark">
-                          <i class="fa-regular fa-bookmark fs-5"></i>
-                        </div>
-                      </div>
+        <div class="carousel-viewport" id="carouselViewport">
+          <div class="carousel-track" id="track">
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course1.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>مهارات التوظيف</p>
+                    <div class="course-rate d-flex">
+                      <i class="fa-regular fa-star pe-2 pt-1"></i>
+                      <p>٤٫٨ (٢٫٦ألف+ تسجيل)</p>
                     </div>
                   </div>
-                </div>
 
-                <div class="course-item">
-                  <div class="course-card">
-                    <div class="card-image-wrapper">
-                      <img
-                        src="assets/images/courses/course2.webp"
-                        class="card-img-top"
-                        alt="Course"
-                      />
-                    </div>
-                    <div class="card-body">
-                      <div
-                        class="course-category d-flex justify-content-between"
-                      >
-                        <p>إدارة الأعمال</p>
-                        <div class="course-rate d-flex">
-                          <i class="fa-regular fa-star pe-2 pt-1"></i>
-                          <p>٤٫٦ (٩٫٣ألف+ تسجيل)</p>
-                        </div>
-                      </div>
-
-                      <h5 class="course-title">
-                        القيادة من القلب والإدارة بالابتكار
-                      </h5>
-                      <div class="rating-wrapper pb-5">
-                        <i class="fa-regular fa-clock"></i>
-                        <span class="rating-count"> ٣س ١٠د </span>
-                      </div>
-                      <div
-                        class="instructor-name d-flex justify-content-between"
-                      >
-                        <span>عبد الله سلام</span>
-                        <div class="book-mark">
-                          <i class="fa-regular fa-bookmark fs-5"></i>
-                        </div>
-                      </div>
-                    </div>
+                  <h5 class="course-title">إتقان مقابلات العمل</h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> ٤٧د </span>
                   </div>
-                </div>
-
-                <div class="course-item">
-                  <div class="course-card">
-                    <div class="card-image-wrapper">
-                      <img
-                        src="assets/images/courses/course3.webp"
-                        class="card-img-top"
-                        alt="Course"
-                      />
-                    </div>
-                    <div class="card-body">
-                      <div
-                        class="course-category d-flex justify-content-between"
-                      >
-                        <p>إدارة الأعمال</p>
-                        <div class="course-rate d-flex">
-                          <i class="fa-regular fa-star pe-2 pt-1"></i>
-                          <p>٤٫٥ (٤٠٠+ تسجيل)</p>
-                        </div>
-                      </div>
-
-                      <h5 class="course-title">
-                        مهارات الظهور الإعلامي للقيادات
-                      </h5>
-                      <div class="rating-wrapper pb-5">
-                        <i class="fa-regular fa-clock"></i>
-                        <span class="rating-count"> ١س ٤د </span>
-                      </div>
-                      <div
-                        class="instructor-name d-flex justify-content-between"
-                      >
-                        <span> د. ماجد بن جعفر الغامدي </span>
-                        <div class="book-mark">
-                          <i class="fa-regular fa-bookmark fs-5"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="course-item">
-                  <div class="course-card">
-                    <div class="card-image-wrapper">
-                      <img
-                        src="assets/images/courses/course4.webp"
-                        class="card-img-top"
-                        alt="Course"
-                      />
-                    </div>
-                    <div class="card-body">
-                      <div
-                        class="course-category d-flex justify-content-between"
-                      >
-                        <p>الاهتمام بالمنزل والحديقة</p>
-                        <div class="course-rate d-flex">
-                          <i class="fa-regular fa-star pe-2 pt-1"></i>
-                          <p>٤٫٣ (١٫١ألف+ تسجيل)</p>
-                        </div>
-                      </div>
-
-                      <h5 class="course-title">
-                        دليلك لإزالة التكدس وإعادة الترتيب
-                      </h5>
-                      <div class="rating-wrapper pb-5">
-                        <i class="fa-regular fa-clock"></i>
-                        <span class="rating-count"> ٥٧د </span>
-                      </div>
-                      <div
-                        class="instructor-name d-flex justify-content-between"
-                      >
-                        <span> مي حكيم </span>
-                        <div class="book-mark">
-                          <i class="fa-regular fa-bookmark fs-5"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="course-item">
-                  <div class="course-card">
-                    <div class="card-image-wrapper">
-                      <img
-                        src="assets/images/courses/course5.webp"
-                        class="card-img-top"
-                        alt="Course"
-                      />
-                    </div>
-                    <div class="card-body">
-                      <div
-                        class="course-category d-flex justify-content-between"
-                      >
-                        <p>دورات للمراهقين واليافعين</p>
-                        <div class="course-rate d-flex">
-                          <i class="fa-regular fa-star pe-2 pt-1"></i>
-                          <p>٤٫٨ (١٫١ألف+ تسجيل)</p>
-                        </div>
-                      </div>
-
-                      <h5 class="course-title">
-                        أساسيات التصوير الفوتوجرافي للمراهقين
-                      </h5>
-                      <div class="rating-wrapper pb-5">
-                        <i class="fa-regular fa-clock"></i>
-                        <span class="rating-count"> ١س ١١د </span>
-                      </div>
-                      <div
-                        class="instructor-name d-flex justify-content-between"
-                      >
-                        <span> ريما رهوانجي </span>
-                        <div class="book-mark">
-                          <i class="fa-regular fa-bookmark fs-5"></i>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="course-item">
-                  <div class="course-card">
-                    <div class="card-image-wrapper">
-                      <img
-                        src="assets/images/courses/course6.webp"
-                        class="card-img-top"
-                        alt="Course"
-                      />
-                    </div>
-                    <div class="card-body">
-                      <div
-                        class="course-category d-flex justify-content-between"
-                      >
-                        <p>الذكاء الاصطناعي للأعمال</p>
-                        <div class="course-rate d-flex">
-                          <i class="fa-regular fa-star pe-2 pt-1"></i>
-                          <p>٤٫٥ (٢٩٫٣ألف+ تسجيل)</p>
-                        </div>
-                      </div>
-
-                      <h5 class="course-title">الذكاء الاصطناعي للمبتدئين</h5>
-                      <div class="rating-wrapper pb-5">
-                        <i class="fa-regular fa-clock"></i>
-                        <span class="rating-count"> ١س ١٧د </span>
-                      </div>
-                      <div
-                        class="instructor-name d-flex justify-content-between"
-                      >
-                        <span> عمر المنيّر </span>
-                        <div class="book-mark">
-                          <i class="fa-regular fa-bookmark fs-5"></i>
-                        </div>
-                      </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> وائل الفخراني </span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <button class="btn-carousel btn-next" id="btnNext">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course2.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>إدارة الأعمال</p>
+                    <div class="course-rate d-flex">
+                      <i class="fa-regular fa-star pe-2 pt-1"></i>
+                      <p>٤٫٦ (٩٫٣ألف+ تسجيل)</p>
+                    </div>
+                  </div>
+
+                  <h5 class="course-title">
+                    القيادة من القلب والإدارة بالابتكار
+                  </h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> ٣س ١٠د </span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span>عبد الله سلام</span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course3.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>إدارة الأعمال</p>
+                    <div class="course-rate d-flex">
+                      <i class="fa-regular fa-star pe-2 pt-1"></i>
+                      <p>٤٫٥ (٤٠٠+ تسجيل)</p>
+                    </div>
+                  </div>
+
+                  <h5 class="course-title">
+                    مهارات الظهور الإعلامي للقيادات
+                  </h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> ١س ٤د </span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> د. ماجد بن جعفر الغامدي </span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course4.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>الاهتمام بالمنزل والحديقة</p>
+                    <div class="course-rate d-flex">
+                      <i class="fa-regular fa-star pe-2 pt-1"></i>
+                      <p>٤٫٣ (١٫١ألف+ تسجيل)</p>
+                    </div>
+                  </div>
+
+                  <h5 class="course-title">
+                    دليلك لإزالة التكدس وإعادة الترتيب
+                  </h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> ٥٧د </span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> مي حكيم </span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course5.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>دورات للمراهقين واليافعين</p>
+                    <div class="course-rate d-flex">
+                      <i class="fa-regular fa-star pe-2 pt-1"></i>
+                      <p>٤٫٨ (١٫١ألف+ تسجيل)</p>
+                    </div>
+                  </div>
+
+                  <h5 class="course-title">
+                    أساسيات التصوير الفوتوجرافي للمراهقين
+                  </h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> ١س ١١د </span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> ريما رهوانجي </span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course6.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>الذكاء الاصطناعي للأعمال</p>
+                    <div class="course-rate d-flex">
+                      <i class="fa-regular fa-star pe-2 pt-1"></i>
+                      <p>٤٫٥ (٢٩٫٣ألف+ تسجيل)</p>
+                    </div>
+                  </div>
+
+                  <h5 class="course-title">الذكاء الاصطناعي للمبتدئين</h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> ١س ١٧د </span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> عمر المنيّر </span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
+
+        <button class="btn-carousel btn-next" id="btnNext">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </div>
+      </div>
+    </section>
+    <!-- Start BoadCourse  -->
+    <section class="BoadCourses-section py-5 position-relative" ">
+        <div class=" container">
+      <div class="row mb-4">
+        <div class="col-12">
+          <h2 class="section-title text-white fw-bold">
+            بودكورس
+          </h2>
+        </div>
+      </div>
+
+      <div class="row position-relative">
+        <button class="btn-carousel btn-prev" id="btnPrev">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-viewport" id="carouselViewport">
+          <div class="carousel-track" id="track">
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course1.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>تطوير الذات</p>
+
+                  </div>
+
+                  <h5 class="course-title">فلسفة إدارة الحياة الشخصية والعملية</h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> 1 ساعة 45 دقيقة </span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> د. إيهاب فكري - مدحت ...</span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course1.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>التسويق</p>
+
+                  </div>
+
+                  <h5 class="course-title">التسويق الاستراتيجي</h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> 2 ساعة 8 دقيقة</span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> د. مروان عثمان – د....</span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course1.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>علم النفس والسلامة الذهنية</p>
+
+                  </div>
+
+                  <h5 class="course-title">عزز صمودك النفسي في عالم دائم التغير</h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> 2 ساعة 0 دقيقة</span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> أحمد الأعور – نهى زهرة</span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course1.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category d-flex justify-content-between">
+                    <p>مهارات التوظيف</p>
+
+                  </div>
+
+                  <h5 class="course-title">من موظف إلى مدير</h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> 1 ساعة 15 دقيقة</span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> محمود مصطفى – …</span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+
+          </div>
+        </div>
+
+        <button class="btn-carousel btn-next" id="btnNext">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+      </div>
+      </div>
+    </section>
+    <!-- Start Course Category  -->
+    <!-- ================= Discover Courses Section ================= -->
+    <section class="courses-section py-5">
+      <div class="container">
+
+        <!-- Title -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2 class="section-title text-white fw-bold">
+              اكتشف أكثر من 1200 دورة تدريبية
+            </h2>
+          </div>
+        </div>
+
+        <!-- Main Tabs -->
+        <div class="main-tabs mb-3">
+          <button class="main-tab active" data-main="popular">المواضيع الشائعة</button>
+          <button class="main-tab" data-main="business">المهارات المهنية والأعمال</button>
+          <button class="main-tab" data-main="family">الأسرة والعلاقات</button>
+          <button class="main-tab" data-main="personal">المهارات الشخصية</button>
+          <button class="main-tab" data-main="arts">الفنون، التصميم والإعلام</button>
+        </div>
+
+
+        <!-- Sub Tabs -->
+        <div class="sub-tabs mb-4">
+
+          <div class="sub-group active" data-main="popular">
+            <button class="sub-tab active" data-target="popular-1">باقة الذكاء الاصطناعي والتحول الرقمي</button>
+            <button class="sub-tab" data-target="popular-2">باقة المهارات المهنية للتميز في الخليج</button>
+            <button class="sub-tab" data-target="popular-3">باقة القيادة والتحول الإداري</button>
+            <button class="sub-tab" data-target="popular-4">باقة تأسيس البزنس الذكي</button>
+            <button class="sub-tab" data-target="popular-5">احمي أطفالك من التحرش</button>
+            <button class="sub-tab" data-target="popular-6">باقة المهارات الأساسية للتوظيف السريع </button>
+          </div>
+
+          <div class="sub-group" data-main="business">
+            <button class="sub-tab active" data-target="business-1">التسويق الرقمي</button>
+            <button class="sub-tab" data-target="business-2">استراتيجية الأعمال والعمليات</button>
+            <button class="sub-tab" data-target="business-3">المبيعات</button>
+
+          </div>
+
+          <div class="sub-group" data-main="family">
+            <button class="sub-tab active" data-target="family-1">أساليب تربية الأبناء</button>
+            <button class="sub-tab" data-target="family-2">دورات للأطفال</button>
+            <button class="sub-tab" data-target="family-3">استشارات العلاقات والزواج</button>
+          </div>
+
+          <div class="sub-group" data-main="personal">
+            <button class="sub-tab active" data-target="personal-1">مهارات التواصل</button>
+            <button class="sub-tab" data-target="personal-2">القيادة والعمل الجماعي</button>
+            <button class="sub-tab" data-target="personal-3">الثقة بالنفس وتقدير الذات</button>
+          </div>
+
+          <div class="sub-group" data-main="arts">
+            <button class="sub-tab active" data-target="arts-1">المهن والمواهب الإعلامية</button>
+            <button class="sub-tab" data-target="arts-2">تصميم الأزياء</button>
+            <button class="sub-tab" data-target="arts-3">التصوير الفوتوغرافي والفيديو</button>
+          </div>
+
+
+
+        </div>
+
+        <!-- Cards Groups -->
+
+        <!-- ===== popular-1  ===== -->
+        <div class="cards-group active" id="popular-1">
+
+          <button class="btn-carousel btn-prev">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+
+              <!-- Card -->
+               <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course6.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category ">
+                    <p>باقة الذكاء الاصطناعي والتحول الرقمي</p>
+                    <div class="course-rate d-flex ">
+                      <i class="fa-regular fa-star pe-2 pt-1"></i>
+                      <p> ٤٫٥ (٣١٫٣ألف تسجيل) </p>
+                    </div>
+                  </div>
+
+                  <h5 class="course-title">الذكاء الاصطناعي للمبتدئين</h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count"> ١س ١٧د </span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> عمر المنيّر </span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <!-- انسخ نفس الكارد -->
+              <div class="course-item">
+              <div class="course-card">
+                <div class="card-image-wrapper">
+                  <img src="assets/images/courses/course6.webp" class="card-img-top" alt="Course" />
+                </div>
+                <div class="card-body">
+                  <div class="course-category ">
+                    <p>باقة الذكاء الاصطناعي والتحول الرقمي</p>
+                    <div class="course-rate d-flex ">
+                      <i class="fa-regular fa-star pe-2 pt-1"></i>
+                      <p>  ٤٫٦ (٥٫٦ألف تسجيل) </p>
+                    </div>
+                  </div>
+
+                  <h5 class="course-title">صناعة المحتوى وإنشاء شخصية حقيقية بالذكاء الاصطناعي</h5>
+                  <div class="rating-wrapper pb-5">
+                    <i class="fa-regular fa-clock"></i>
+                    <span class="rating-count">  ٤س ٢٩د </span>
+                  </div>
+                  <div class="instructor-name d-flex justify-content-between">
+                    <span> سامح عويـات</span>
+                    <div class="book-mark">
+                      <i class="fa-regular fa-bookmark fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course4.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course2.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course3.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="btn-carousel btn-next">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+
+        <!-- ===== popular-2  ===== -->
+        <div class="cards-group" id="popular-2">
+
+          <button class="btn-carousel btn-prev">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+
+              <!-- Card -->
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course1.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- انسخ نفس الكارد -->
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course1.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course4.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course2.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course3.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="btn-carousel btn-next">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+
+        <!-- ===== business-1 ===== -->
+        <div class="cards-group" id="business-1">
+
+          <button class="btn-carousel btn-prev">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+
+              <!-- Card -->
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course1.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- انسخ نفس الكارد -->
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course1.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course4.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course2.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course3.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="btn-carousel btn-next">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+
+        <!-- ===== personal-2 ===== -->
+      <div class="cards-group" id="personal-2">
+
+          <button class="btn-carousel btn-prev">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+
+              <!-- Card -->
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course1.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- انسخ نفس الكارد -->
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course1.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course4.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course2.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/courses/course3.webp" class="card-img-top">
+                  </div>
+                  <div class="card-body">
+                    <p class="course-category">تطوير الذات</p>
+                    <h5 class="course-title">القيادة وفنون التأثير</h5>
+                    <div class="rating-wrapper pb-4">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count">57 دقيقة</span>
+                    </div>
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>طارق رشيد</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="btn-carousel btn-next">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

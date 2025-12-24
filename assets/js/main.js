@@ -1,73 +1,210 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. تعريف العناصر
-    const track = document.getElementById("track");
-    const btnNext = document.getElementById("btnNext");
-    const btnPrev = document.getElementById("btnPrev");
+  const track = document.getElementById("track");
+  const btnNext = document.getElementById("btnNext");
+  const btnPrev = document.getElementById("btnPrev");
 
-    if (!track || !btnNext || !btnPrev) return;
+  if (!track || !btnNext || !btnPrev) return;
 
-    let currentPosition = 0;
+  const visibleCards = 3; // عدد الكروت الظاهرة
+  const gap = 20;
 
-    function moveSlider(direction) {
-        // 2. حساب العرض والمسافات
-        const cardItem = document.querySelector(".course-item");
-        if (!cardItem) return;
+  let items = Array.from(track.children);
 
-        const cardWidth = cardItem.offsetWidth;
-        const style = window.getComputedStyle(track);
-        const gap = parseFloat(style.gap) || 20; 
-        const moveAmount = cardWidth + gap;
+  // ===== 1) Clone =====
+  const firstClones = items.slice(0, visibleCards).map(el => el.cloneNode(true));
+  const lastClones = items.slice(-visibleCards).map(el => el.cloneNode(true));
 
-        // 3. حساب الحدود
-        const maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
+  firstClones.forEach(clone => track.appendChild(clone));
+  lastClones.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
 
-        // 4. منطق الحركة (Loop Logic)
-        if (direction === "next") {
-            // --- زر التالي ---
-            
-            // تحقق: هل نحن وصلنا للنهاية بالفعل؟ (نستخدم هامش خطأ بسيط 5px للدقة)
-            if (currentPosition >= maxScroll - 5) {
-                // نعم، وصلنا للنهاية -> ارجع للبداية (Loop to Start)
-                currentPosition = 0;
-            } else {
-                // لا، لسه موصلناش -> كمل حركة عادي
-                currentPosition += moveAmount;
+  items = Array.from(track.children);
 
-                // لو الحركة دي عدت الحد الأقصى، نثبت عند الحد الأقصى
-                if (currentPosition > maxScroll) {
-                    currentPosition = maxScroll;
-                }
-            }
+  // ===== 2) حساب المقاسات =====
+  let cardWidth = items[visibleCards].offsetWidth;
+  let moveAmount = cardWidth + gap;
 
-        } else {
-            // --- زر السابق ---
+  let index = visibleCards;
 
-            // تحقق: هل نحن في البداية بالفعل؟
-            if (currentPosition <= 0 + 5) {
-                // نعم، نحن في البداية -> اذهب للنهاية (Loop to End)
-                currentPosition = maxScroll;
-            } else {
-                // لا، لسه موصلناش -> ارجع لورا عادي
-                currentPosition -= moveAmount;
+  // نبدأ من أول عنصر حقيقي
+  track.style.transform = `translateX(${index * moveAmount}px)`;
 
-                // لو الحركة دي قلت عن الصفر، نثبت عند الصفر
-                if (currentPosition < 0) {
-                    currentPosition = 0;
-                }
-            }
-        }
+  function move(animated = true) {
+    track.style.transition = animated ? "transform 0.5s ease" : "none";
+    track.style.transform = `translateX(${index * moveAmount}px)`;
+  }
 
-        // 5. تطبيق الحركة
-        track.style.transform = `translateX(${currentPosition}px)`;
+  // ===== 3) Next =====
+  btnNext.addEventListener("click", () => {
+    index++;
+    move(true);
+
+    if (index === items.length - visibleCards) {
+      setTimeout(() => {
+        index = visibleCards;
+        move(false);
+      }, 500);
     }
+  });
 
-    // ربط الأزرار
-    btnNext.addEventListener("click", () => moveSlider("next"));
-    btnPrev.addEventListener("click", () => moveSlider("prev"));
+  // ===== 4) Prev =====
+  btnPrev.addEventListener("click", () => {
+    index--;
+    move(true);
 
-    // إعادة الضبط عند تغيير حجم الشاشة
-    window.addEventListener("resize", () => {
-        currentPosition = 0;
-        track.style.transform = `translateX(0px)`;
-    });
+    if (index === 0) {
+      setTimeout(() => {
+        index = items.length - visibleCards * 2;
+        move(false);
+      }, 500);
+    }
+  });
+
+  // ===== 5) Resize =====
+  window.addEventListener("resize", () => {
+    cardWidth = items[visibleCards].offsetWidth;
+    moveAmount = cardWidth + gap;
+    move(false);
+  });
 });
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// تفعيل أزرار الفئات الفرعية عند الضغط عليها
+// ================= Tabs =================
+$(function () {
+
+  /* ========== INIT DEFAULT ========== */
+  function initDefault() {
+    $(".main-tab, .sub-tab, .sub-group, .cards-group").removeClass("active");
+
+    const $main = $('.main-tab[data-main="popular"]');
+    const $group = $('.sub-group[data-main="popular"]');
+    const $sub = $group.find(".sub-tab").first();
+    const $cards = $("#" + $sub.data("target"));
+
+    $main.addClass("active");
+    $group.addClass("active");
+    $sub.addClass("active");
+    $cards.addClass("active");
+
+    initCarousel($cards);
+    refreshCarousel($cards);
+  }
+
+  initDefault();
+
+  /* ========== MAIN TABS ========== */
+  $(".main-tab").on("click", function () {
+    const main = $(this).data("main");
+
+    $(".main-tab").removeClass("active");
+    $(this).addClass("active");
+
+    $(".sub-group").removeClass("active")
+      .filter(`[data-main="${main}"]`).addClass("active");
+
+    $(".sub-tab").removeClass("active");
+    $(".cards-group").removeClass("active");
+
+    const $firstSub = $(`.sub-group[data-main="${main}"] .sub-tab`).first();
+    const $target = $("#" + $firstSub.data("target"));
+
+    $firstSub.addClass("active");
+    $target.addClass("active");
+
+    initCarousel($target);
+    refreshCarousel($target);
+  });
+
+  /* ========== SUB TABS ========== */
+  $(".sub-tab").on("click", function () {
+    const $parent = $(this).closest(".sub-group");
+    const $target = $("#" + $(this).data("target"));
+
+    $parent.find(".sub-tab").removeClass("active");
+    $(this).addClass("active");
+
+    $(".cards-group").removeClass("active");
+    $target.addClass("active");
+
+    initCarousel($target);
+    refreshCarousel($target);
+  });
+
+});
+
+
+/* ========== CAROUSEL CORE ========== */
+function initCarousel($wrapper) {
+
+  if ($wrapper.data("init")) return;
+
+  const $track = $wrapper.find(".carousel-track");
+  const $next = $wrapper.find(".btn-next");
+  const $prev = $wrapper.find(".btn-prev");
+
+  const visible = 3, gap = 20;
+  let $items = $track.children();
+
+  if ($items.length <= visible) return;
+
+  $items.slice(0, visible).clone().appendTo($track);
+  $items.slice(-visible).clone().prependTo($track);
+
+  $items = $track.children();
+  let index = visible;
+  let moveAmount = 0;
+
+  function calc() {
+    const w = $items.eq(visible).outerWidth();
+    moveAmount = w + gap;
+    $track.css({ transition: "none", transform: `translateX(${index * moveAmount}px)` });
+  }
+
+  calc();
+
+  function move(anim = true) {
+    $track.css({
+      transition: anim ? "transform .5s ease" : "none",
+      transform: `translateX(${index * moveAmount}px)`
+    });
+  }
+
+  $next.on("click", () => {
+    index++;
+    move(true);
+    if (index === $items.length - visible) {
+      setTimeout(() => { index = visible; move(false); }, 500);
+    }
+  });
+
+  $prev.on("click", () => {
+    index--;
+    move(true);
+    if (index === 0) {
+      setTimeout(() => {
+        index = $items.length - visible * 2;
+        move(false);
+      }, 500);
+    }
+  });
+
+  $(window).on("resize", calc);
+
+  $wrapper.data("init", true);
+}
+
+
+/* ========== REFRESH ON SHOW ========== */
+function refreshCarousel($wrapper) {
+  const $track = $wrapper.find(".carousel-track");
+  const $items = $track.children();
+  if ($items.length < 4) return;
+
+  requestAnimationFrame(() => {
+    const w = $items.eq(3).outerWidth();
+    $track.css({
+      transition: "none",
+      transform: `translateX(${3 * (w + 20)}px)`
+    });
+  });
+}
+
