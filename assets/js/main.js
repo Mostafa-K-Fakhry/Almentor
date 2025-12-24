@@ -207,4 +207,72 @@ function refreshCarousel($wrapper) {
     });
   });
 }
+//////////////////////////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+
+    const track = document.getElementById("expertsTrack");
+  const btnNext = document.getElementById("expertsNext");
+  const btnPrev = document.getElementById("expertsPrev");
+
+  if (!track || !btnNext || !btnPrev) return;
+
+  const visibleCards = 4;
+  const gap = 30;
+
+  let items = Array.from(track.children);
+  if (items.length <= visibleCards) return;
+
+  /* ===== Clone ===== */
+  const firstClones = items.slice(0, visibleCards).map(el => el.cloneNode(true));
+  const lastClones = items.slice(-visibleCards).map(el => el.cloneNode(true));
+
+  firstClones.forEach(clone => track.appendChild(clone));
+  lastClones.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
+
+  items = Array.from(track.children);
+
+  let cardWidth = items[visibleCards].offsetWidth;
+  let moveAmount = cardWidth + gap;
+  let index = visibleCards;
+
+  track.style.transform = `translateX(${index * moveAmount}px)`;
+
+  function move(animated = true) {
+    track.style.transition = animated ? "transform 0.5s ease" : "none";
+    track.style.transform = `translateX(${index * moveAmount}px)`;
+  }
+
+  btnNext.addEventListener("click", () => {
+    index++;
+    move(true);
+
+    if (index === items.length - visibleCards) {
+      setTimeout(() => {
+        index = visibleCards;
+        move(false);
+      }, 500);
+    }
+  });
+
+  btnPrev.addEventListener("click", () => {
+    index--;
+    move(true);
+
+    if (index === 0) {
+      setTimeout(() => {
+        index = items.length - visibleCards * 2;
+        move(false);
+      }, 500);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    cardWidth = items[visibleCards].offsetWidth;
+    moveAmount = cardWidth + gap;
+    move(false);
+  });
+
+});
+
+
 
