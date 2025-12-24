@@ -536,3 +536,93 @@ body {
   display: flex;
   gap: 20px;
 }
+/* ////////////////////////////////////////////////////////////////// */
+/* sliders section */
+
+.sliders-section {
+  background: #000;
+}
+
+/* الكارت */
+.slider-card {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 700px;
+}
+
+/* الصورة */
+.slider-card img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+/* overlay */
+.slider-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.3)
+  );
+  color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.slider-overlay h3,
+.slider-overlay p{
+    justify-content: center;   /* توسيط رأسي */
+  align-items: flex-end;     /* 👈 كل حاجة على اليمين */
+  text-align: right;         /* 👈 النص يبدأ من اليمين */
+  direction: rtl;            /* 👈 عربي */
+}
+
+
+.slider-overlay h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.slider-overlay p {
+  font-size: 15px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* meta (icons + text) */
+.slider-meta {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.slider-meta i {
+  margin-left: 6px;
+}
+
+/* indicators */
+.custom-indicators {
+  bottom: -40px;
+}
+
+.custom-indicators button {
+  width: 40px;
+  height: 4px;
+  background-color: #666;
+  border-radius: 5px;
+  margin: 0 4px;
+}
+
+.custom-indicators .active {
+  background-color: red;
+}
