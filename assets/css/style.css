@@ -1,157 +1,158 @@
 /* --- إعدادات عامة --- */
 :root {
-    --bg-dark: #1d1d1d;       /* لون خلفية الناف بار */
-    --bg-input: #262626;      /* لون خلفية البحث أغمق قليلاً */
-    --border-color: #383838;  /* لون الحدود */
-    --red-brand: #EB2027;     /* أحمر المنتر */
-    --text-gray: #a1a1a1;     /* لون البليس هولدر */
+  --bg-dark: #1d1d1d; /* لون خلفية الناف بار */
+  --bg-input: #262626; /* لون خلفية البحث أغمق قليلاً */
+  --border-color: #383838; /* لون الحدود */
+  --red-brand: #eb2027; /* أحمر المنتر */
+  --text-gray: #a1a1a1; /* لون البليس هولدر */
 }
 
 body {
-    background-color: #000;
-    font-family: "Noto Kufi Arabic", sans-serif;
-    padding-top: 72px; /* لمنع اختفاء المحتوى تحت الناف بار */
+  background-color: #000;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  padding-top: 72px; /* لمنع اختفاء المحتوى تحت الناف بار */
 }
 
 /* --- Navbar Core --- */
 .navbar {
-    height: 60px;
-    background-color: var(--bg-dark);
-    padding: 0;
-    /* border-bottom: 1px solid #2a2a2a; */
+  height: 60px;
+  background-color: var(--bg-dark);
+  padding: 0;
+  /* border-bottom: 1px solid #2a2a2a; */
 }
 
 .navbar-logo {
-    width: 124px; /* تم الضبط بدقة */
-    height: auto;
+  width: 124px; /* تم الضبط بدقة */
+  height: auto;
 }
 
-.fs-16 { 
-    font-size: 16px !important;
-    font-weight: 500;
- }
-.fs-12 { font-size: 12px !important; }
-.fs-10 { font-size: 10px !important; }
+.fs-16 {
+  font-size: 16px !important;
+  font-weight: 500;
+}
+.fs-12 {
+  font-size: 12px !important;
+}
+.fs-10 {
+  font-size: 10px !important;
+}
 
 /* --- Links --- */
 .nav-link {
-    padding: 0 !important;
-    
-    
+  padding: 0 !important;
 }
-
 
 /* --- Buttons --- */
 /* 1. زر اشترك (شفاف بحدود) */
 .btn-subscribe {
-    color: #fff;
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    padding: 5px 18px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: all 0.3s;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 5px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s;
 }
 .btn-subscribe:hover {
-    background-color: #fff;
-    color: var(--red-brand);
-    border-color: #fff;
+  background-color: #fff;
+  color: var(--red-brand);
+  border-color: #fff;
 }
 
 /* 2. زر إنشاء حساب (أحمر) */
 .btn-register {
-    background-color: var(--red-brand);
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    width: 173.575px;
-    padding: 7px 16px;
-    font-size: 14px;
-    font-weight: 700;
-    transition: background-color 0.3s;
+  background-color: var(--red-brand);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  width: 173.575px;
+  padding: 7px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.3s;
 }
 .btn-register:hover {
-    background-color: #fff;
-    color: var(--red-brand);
+  background-color: #fff;
+  color: var(--red-brand);
 }
 
 /* --- Search Bar (طبق الأصل) --- */
 .search-container {
-    position: relative;
-    width: 220px;
-    /*العرضالمطابقللصورة*/background-color: black;
-    border-radius: 10px  ;
-    -webkit-border-radius: 10px  ;
-    -moz-border-radius: 10px  ;
-    -ms-border-radius: 10px  ;
-    -o-border-radius: 10px  ;
+  position: relative;
+  width: 220px;
+  /*العرضالمطابقللصورة*/
+  background-color: black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .search-input {
-    background-color: black;
-    border: 1px solid black;
-    height: 40px;
-    color: #fff;
-    padding-right: 40px;
-    /*مسافةللأيقونةيمين*/padding-left: 15px;
-    font-size: 13px;
-    box-shadow: none !important;
-    font-style: italic;
-
+  background-color: black;
+  border: 1px solid black;
+  height: 40px;
+  color: #fff;
+  padding-right: 40px;
+  /*مسافةللأيقونةيمين*/
+  padding-left: 15px;
+  font-size: 13px;
+  box-shadow: none !important;
+  font-style: italic;
 }
 
 .search-input::placeholder {
-    color: var(--text-gray);
-    font-size: 13px;
-    opacity: 0.8;
+  color: var(--text-gray);
+  font-size: 13px;
+  opacity: 0.8;
 }
 
 .search-input:focus {
-    background-color: black;
-    border-color: black;
-    color: #fff;
-    
+  background-color: black;
+  border-color: black;
+  color: #fff;
 }
 
 .search-icon {
-    position: absolute;
-    top: 50%;
-    right: 12px; /* الأيقونة يمين لأن الموقع عربي */
-    transform: translateY(-50%);
-    color: var(--text-gray);
-    font-size: 15px;
-    pointer-events: none;
+  position: absolute;
+  top: 50%;
+  right: 12px; /* الأيقونة يمين لأن الموقع عربي */
+  transform: translateY(-50%);
+  color: var(--text-gray);
+  font-size: 15px;
+  pointer-events: none;
 }
 
 /* --- Divider & Circles (التفاصيل الدقيقة) --- */
 .vertical-divider {
-    width: 1px;
-    height: 28px;
-    background-color: #444; /* الخط الرفيع الفاصل */
-    margin: 0 5px;
+  width: 1px;
+  height: 28px;
+  background-color: #444; /* الخط الرفيع الفاصل */
+  margin: 0 5px;
 }
 
 .icon-circle {
-    width: 36px;
-    height: 36px;
-    background-color: #2d2d2d; /* خلفية الدوائر */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    border: 1px solid transparent;
+  width: 36px;
+  height: 36px;
+  background-color: #2d2d2d; /* خلفية الدوائر */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: 1px solid transparent;
 }
 
 .icon-circle:hover {
-    background-color: #3a3a3a;
-    border-color: #444;
+  background-color: #3a3a3a;
+  border-color: #444;
 }
 
 .hover-opacity:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -159,322 +160,349 @@ body {
 /* ===== HERO ===== */
 
 .hero-section {
-    background-color: #000;
-    min-height: 600px;
-    padding-top: 0px;
-    overflow: hidden;
-        margin-top: -72px;        /* نفس ارتفاع الـ navbar */
-    padding-top: 72px;        /* علشان المحتوى مايدخلش تحت الناف */
+  background-color: #000;
+  min-height: 600px;
+  padding-top: 0px;
+  overflow: hidden;
+  margin-top: -72px; /* نفس ارتفاع الـ navbar */
+  padding-top: 72px; /* علشان المحتوى مايدخلش تحت الناف */
 }
 
 .hero-content {
-    position: absolute;
-    right: 60px;          /* مسافة ثابتة من اليمين */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+  position: absolute;
+  right: 60px; /* مسافة ثابتة من اليمين */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 
-    direction: rtl;
-    text-align: right;
+  direction: rtl;
+  text-align: right;
 }
 
 .hero-title,
 .hero-subtitle {
-    text-align: right;
+  text-align: right;
 }
 
-
 .hero-title {
-    font-size: 38px;
-    font-weight: 800;
-    color: #fff;
-    line-height: 1.4;
-    margin-bottom: 20px;
+  font-size: 38px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 20px;
 }
 
 .hero-subtitle {
-    font-size: 18px;
-    color: #cccccc;
-    font-weight: 400;
-    margin-bottom: 40px;
+  font-size: 18px;
+  color: #cccccc;
+  font-weight: 400;
+  margin-bottom: 40px;
 }
 
 .btn-hero {
-    background-color: var(--red-brand);
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 12px 50px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: 0.3s;
-    display: inline-block;
+  background-color: var(--red-brand);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 50px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
 }
-.btn-hero:hover { background-color: #c40812; color: #fff; }
+.btn-hero:hover {
+  background-color: #c40812;
+  color: #fff;
+}
 
 /* --- Hero Image Masking (التريكه بتاعت الفيديو) --- */
 .hero-image-wrapper {
-    /* position: relative; */
-    width: 100%;
-    margin-left: -50px; /* سحب الصورة لليسار */
-    margin-top: -100px;
+  /* position: relative; */
+  width: 100%;
+  margin-left: -50px; /* سحب الصورة لليسار */
+  margin-top: -100px;
 }
 
 .hero-img {
-    width: 110%;
-    height: auto;
-    display: block;
-    position: relative;
+  width: 110%;
+  height: auto;
+  display: block;
+  position: relative;
 
-    /* زق الصورة للشمال */
-    transform: translateX(-350px);
+  /* زق الصورة للشمال */
+  transform: translateX(-350px);
 
-    -webkit-mask-image:
-        linear-gradient(to left,  transparent 0%, black 25%),
-        linear-gradient(to right, transparent 0%, black 25%),
-        linear-gradient(to top,   transparent 0%, black 30%);
-        
-    mask-image:
-        linear-gradient(to left,  transparent 0%, black 25%),
-        linear-gradient(to right, transparent 0%, black 25%),
-        linear-gradient(to top,   transparent 0%, black 30%);
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, black 25%),
+    linear-gradient(to right, transparent 0%, black 25%),
+    linear-gradient(to top, transparent 0%, black 30%);
 
-    -webkit-mask-composite: source-in;
-    mask-composite: intersect;
+  mask-image: linear-gradient(to left, transparent 0%, black 25%),
+    linear-gradient(to right, transparent 0%, black 25%),
+    linear-gradient(to top, transparent 0%, black 30%);
+
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
 }
 
-
 /* Utility Classes */
-.fs-14 { font-size: 14px; }
-.fs-12 { font-size: 12px; }
-.fs-10 { font-size: 10px; }
-.hover-opacity:hover { opacity: 0.8; }
+.fs-14 {
+  font-size: 14px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-10 {
+  font-size: 10px;
+}
+.hover-opacity:hover {
+  opacity: 0.8;
+}
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* start Courses  */
 /* الخلفية العامة للسيكشن */
 .courses-section {
-    background-color: #000;
+  background-color: #000;
 }
 
 /* --- ضبط الكيرسول والأزرار (تصحيح المكان) --- */
 .carousel-wrapper {
-    /* لإعطاء مساحة للأزرار الجانبية */
-    padding: 0 10px; 
+  /* لإعطاء مساحة للأزرار الجانبية */
+  padding: 0 10px;
 }
 
 .carousel-viewport {
-    overflow: hidden;
-    padding: 20px 5px; /* مسافة بسيطة عشان الظل ميتقطعش */
+  overflow: hidden;
+  padding: 20px 5px; /* مسافة بسيطة عشان الظل ميتقطعش */
 }
 
 .carousel-track {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* === تصميم الأزرار (شكل الكيرسول الأصلي) === */
 .btn-carousel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    background-color: #fff; /* خلفية داكنة للزر */
-    color: #444;
-    border: 1px solid #444;
-    border-radius: 50%; /* دائري */
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: #fff; /* خلفية داكنة للزر */
+  color: #444;
+  border: 1px solid #444;
+  border-radius: 50%; /* دائري */
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .btn-carousel:hover {
-    background-color: #EB2027; /* أحمر عند الهوفر */
-    border-color: #EB2027;
+  background-color: #eb2027; /* أحمر عند الهوفر */
+  border-color: #eb2027;
 }
 
 /* مكان الأزرار: نخرجهم برة الكروت شوية */
 .btn-prev {
-    right: -20px; /* في العربي السابق يمين */
+  right: -20px; /* في العربي السابق يمين */
 }
 
 .btn-next {
-    left: -20px; /* في العربي التالي يسار */
+  left: -20px; /* في العربي التالي يسار */
 }
 
 @media (max-width: 1200px) {
-    /* في الشاشات الأصغر ندخل الأزرار جوه شوية */
-    .btn-prev { right: 0; }
-    .btn-next { left: 0; }
+  /* في الشاشات الأصغر ندخل الأزرار جوه شوية */
+  .btn-prev {
+    right: 0;
+  }
+  .btn-next {
+    left: 0;
+  }
 }
-
 
 /* --- لون الكارد (تصحيح اللون) --- */
 .course-card {
-    /* هذا هو اللون الرمادي الأصلي وليس شفاف */
-    background-color: #1f1f1f; 
-    border-radius: 8px;
-    overflow: hidden; /* عشان الصورة تتقص مع الحواف */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #2a2a2a; /* حدود خفيفة جداً */
+  /* هذا هو اللون الرمادي الأصلي وليس شفاف */
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden; /* عشان الصورة تتقص مع الحواف */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2a2a2a; /* حدود خفيفة جداً */
 }
 
 /* Hover Effect */
 .course-card:hover {
-    transform: translateY(-7px);
-    /* ظل أسود قوي جداً يظهر وراء الكارد */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); 
-    background-color: #252525; /* تفتيح بسيط جداً للخلفية */
-    border-color: #333;
-    z-index: 5;
+  transform: translateY(-7px);
+  /* ظل أسود قوي جداً يظهر وراء الكارد */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+  background-color: #252525; /* تفتيح بسيط جداً للخلفية */
+  border-color: #333;
+  z-index: 5;
 }
-
 
 /* --- أبعاد الكروت (3 كروت بالظبط) --- */
 .course-item {
-    /* (100% - (20px * 2 gaps)) / 3 cards */
-    flex: 0 0 calc((100% - 40px) / 3);
-    max-width: calc((100% - 40px) / 3);
+  /* (100% - (20px * 2 gaps)) / 3 cards */
+  flex: 0 0 calc((100% - 40px) / 3);
+  max-width: calc((100% - 40px) / 3);
 }
 
 @media (max-width: 991px) {
-    .course-item { flex: 0 0 100%; max-width: 100%; }
-    .btn-carousel { display: none; } /* إخفاء الأزرار في الموبايل */
-    .carousel-wrapper { overflow-x: auto; } /* سكرول باللمس */
+  .course-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btn-carousel {
+    display: none;
+  } /* إخفاء الأزرار في الموبايل */
+  .carousel-wrapper {
+    overflow-x: auto;
+  } /* سكرول باللمس */
 }
 
 /* --- تفاصيل المحتوى --- */
 .card-image-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 .card-img-top {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-body {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* لملء المساحة */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* لملء المساحة */
 }
 
 .course-title {
-    color: rgb(242, 242, 242);
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
-    margin-bottom: 8px;
-    
-   
+  color: rgb(242, 242, 242);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 8px;
 }
 
 .course-card:hover .course-title {
-    color: #EB2027;
+  color: #eb2027;
 }
-.course-category{
-    color: #F2F2F2;
-    font-size: 16px;
-    font-weight: 150;
+.course-category {
+  color: #f2f2f2;
+  font-size: 16px;
+  font-weight: 150;
 }
-.instructor-name span{
-    color: #F2F2F2;
-    font-size: 16px;
-    font-weight: 150;
-   
+.instructor-name span {
+  color: #f2f2f2;
+  font-size: 16px;
+  font-weight: 150;
 }
-
 
 /* Rating & Price */
 .rating-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    /* margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* margin-top: 10px;
     margin-bottom: 8px; */
 }
-.fa-star  { 
-    color: #f38933; 
-    font-weight: bold; 
-    font-size: 14px;
- }
-.fa-clock{  
-     color: #F2F2F2;
-     font-size: 12px;
+.fa-star {
+  color: #f38933;
+  font-weight: bold;
+  font-size: 14px;
 }
-.book-mark{
-    width: 40px;
-    height: 40px;
-    background-color: #212529;
-    padding-top: .6rem;
-    padding-right: .7rem;
-    border: 1px solid white;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+.fa-clock {
+  color: #f2f2f2;
+  font-size: 12px;
 }
-.fa-bookmark{
-     color: #F2F2F2;
-     text-align: center;
-     
-     
-
+.book-mark {
+  width: 40px;
+  height: 40px;
+  background-color: #212529;
+  padding-top: 0.6rem;
+  padding-right: 0.7rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
-.rating-count { color:#F2F2F2; font-size: 12px; }
+.fa-bookmark {
+  color: #f2f2f2;
+  text-align: center;
+}
+.rating-count {
+  color: #f2f2f2;
+  font-size: 12px;
+}
 
 .price-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.current-price { color: #fff; font-weight: 800; font-size: 16px; }
-.old-price { color: #666; text-decoration: line-through; font-size: 13px; }
+.current-price {
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+}
+.old-price {
+  color: #666;
+  text-decoration: line-through;
+  font-size: 13px;
+}
 
 /* Badges */
 .badge-overlay {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 4px 8px;
-    font-size: 11px;
-    font-weight: 700;
-    color: #fff;
-    border-radius: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 4px;
 }
-.badge-bestseller { background: #EB2027; }
-.badge-new { background: #27ae60; }
+.badge-bestseller {
+  background: #eb2027;
+}
+.badge-new {
+  background: #27ae60;
+}
 
 .btn-wishlist {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 30px;
-    height: 30px;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    transition: 0.2s;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: 0.2s;
 }
-.btn-wishlist:hover { background: #fff; color: #EB2027; }
+.btn-wishlist:hover {
+  background: #fff;
+  color: #eb2027;
+}
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Start Course Category   */
 .main-tabs {
@@ -484,15 +512,15 @@ body {
 }
 
 .main-tab {
-    background: transparent;
+  background: transparent;
   border: none;
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-size: 14px;
   cursor: pointer;
 }
 
 .main-tab.active {
-    text-decoration: solid 1px underline #EB2027;
+  text-decoration: solid 1px underline #eb2027;
 }
 
 .sub-tabs {
@@ -564,11 +592,7 @@ body {
 .slider-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.85),
-    rgba(0,0,0,0.3)
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3));
   color: #fff;
   padding: 40px;
   display: flex;
@@ -578,13 +602,12 @@ body {
 }
 
 .slider-overlay h3,
-.slider-overlay p{
-    justify-content: center;   /* توسيط رأسي */
-  align-items: flex-end;     /* 👈 كل حاجة على اليمين */
-  text-align: right;         /* 👈 النص يبدأ من اليمين */
-  direction: rtl;            /* 👈 عربي */
+.slider-overlay p {
+  justify-content: center; /* توسيط رأسي */
+  align-items: flex-end; /* 👈 كل حاجة على اليمين */
+  text-align: right; /* 👈 النص يبدأ من اليمين */
+  direction: rtl; /* 👈 عربي */
 }
-
 
 .slider-overlay h3 {
   font-weight: bold;
@@ -818,7 +841,7 @@ body {
   padding: 20px;
   height: 100%;
   color: #fff;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -856,4 +879,99 @@ body {
 }
 .sec-bg {
   background-color: #101010;
+}
+/* ////////////////////////////////////////////////////////////////////////////////// */
+/* ================= Vertical Partners Slider (Y-Axis) ================= */
+.partners-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    /* لتوسيط السلايدر في منتصف الصفحة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.partners-section .section-title {
+    color: #000 !important;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* حاوية السلايدر - نحدد لها ارتفاع وعرض ثابت */
+.slider-container {
+    height: 400px;  /* ارتفاع النافذة التي تظهر فيها الصور */
+    width: 200px;   /* عرض العمود */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; /* توسيط */
+    border: 1px solid #eee; /* إطار خفيف اختياري */
+}
+
+/* تأثير التلاشي من فوق وتحت (Vignette Effect Vertical) */
+.slider-container::before,
+.slider-container::after {
+    background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 50px; /* ارتفاع التلاشي */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+
+.slider-container::before {
+    top: 0;
+}
+
+.slider-container::after {
+    bottom: 0;
+    transform: rotateZ(180deg);
+}
+
+/* الشريط المتحرك */
+.slide-track {
+    display: flex;
+    flex-direction: column; /* تحويل الترتيب لعمودي */
+    width: 100%;
+    /* حساب الارتفاع: ارتفاع الصورة الواحدة (100px) × عدد الصور الكلي (18) */
+    height: calc(100px * 18);
+    animation: scroll-y 30s linear infinite;
+}
+
+/* الشريحة الواحدة */
+.slide {
+    height: 100px; /* ارتفاع ثابت لكل لوجو */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0; /* مسافة رأسية بين الشعارات */
+}
+
+.slide img {
+    max-width: 80%; /* لضمان عدم خروج الصورة عن العرض */
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.slide img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* أنيميشن الحركة الرأسية */
+@keyframes scroll-y {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        /* التحرك للأعلى بمقدار نصف الارتفاع الكلي (9 صور × 100px) */
+        transform: translateY(calc(-100px * 9));
+    }
 }
