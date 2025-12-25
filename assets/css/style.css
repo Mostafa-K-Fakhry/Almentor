@@ -503,6 +503,9 @@ body {
   background: #fff;
   color: #eb2027;
 }
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
 /* ////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* Start Course Category   */
 .main-tabs {
@@ -882,3 +885,559 @@ body {
 }
 /* ////////////////////////////////////////////////////////////////////////////////// */
 /* ================= Vertical Partners Slider (Y-Axis) ================= */
+/* ================= Stakeholders ================= */
+
+/* ================= Business Partners Section ================= */
+
+.business-partners {
+  background: #000;
+  padding: 100px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.partners-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ================= Logos Animation ================= */
+
+.logos-wrapper {
+  display: flex;
+  gap: 150px; /* قربنا العمودين */
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+}
+
+.logos-column {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  animation: scrollY 7s linear infinite;
+  -webkit-animation: scrollY 7s linear infinite;
+
+}
+
+.col-2 {
+  animation-direction: reverse;
+}
+
+.logos-column img {
+  width: 120px;
+  
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.logos-column img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* ================= Animation ================= */
+
+@keyframes scrollY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* ================= Text ================= */
+
+.partners-text {
+  max-width: 520px;
+}
+
+.partners-text .badge-sta {
+  font-size: 14px;
+  color: white;
+}
+
+.partners-text h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.partners-text p {
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.partners-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.partners-text ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-right: 18px;
+}
+
+.partners-text ul li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: #fff;
+}
+
+/* ================= Button ================= */
+
+.sta-btn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sta-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 992px) {
+  .partners-content {
+    flex-direction: column;
+  }
+
+  .logos-wrapper {
+    height: 320px;
+  }
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////// */
+/* solutions section */
+.solutions-section {
+  padding: 80px 0;
+  direction: rtl;
+  display: flex-start;
+}
+
+/* title */
+.solutions-title {
+  color: #fff;
+  text-align: start;       /* 👈 العنوان في النص */
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* grid */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* card */
+.solution-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 36px 28px;
+  color: #fff;
+  min-height: 220px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+
+  display: flex-start;               /* 👈 مهم */
+  flex-direction: column;      /* 👈 العناصر فوق بعض */
+  align-items: center;         /* 👈 توسيط أفقي */        /* 👈 النص في النص */
+}
+
+/* icon */
+.solution-card .icon {
+  font-size: 20px;             /* 👈 حجم الأيقونة */
+  margin-bottom: 20px;         /* 👈 مسافة بينها وبين العنوان */
+  opacity: 0.9;
+}
+
+/* card title */
+.solution-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* card text */
+.solution-card p {
+  color: #bbb;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-title {
+    font-size: 24px;
+  }
+}
+.solution-card .icon .fa-star {
+  color: #bbb;
+  font-size: 20px;
+}
+/* ///////////////////////////////////////// */
+/* app section */
+.app-section {
+  padding: 100px 0;
+  position: relative;
+  direction: rtl;
+  overflow: hidden;
+}
+
+/* wrapper */
+.app-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* image */
+.app-image {
+  position: relative;
+  flex: 1;
+  z-index: 2;
+}
+
+.app-image img {
+  width: 550px;
+  display: block;
+  z-index: 1000;
+}
+
+/* badges */
+.badge {
+  position: absolute;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.badge-top {
+  top: 10%;
+  left: -40px;
+}
+
+.badge-right {
+  top: 40%;
+  right: -60px;
+}
+
+.badge-bottom {
+  bottom: 10%;
+  left: -30px;
+}
+
+/* content */
+.app-content {
+  flex: 1.2;
+  color: #fff;
+}
+
+.app-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.app-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.app-content li {
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: #ddd;
+  display: flex;
+  gap: 10px;
+}
+
+/* stores */
+.store-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.store-buttons img {
+  height: 48px;
+  cursor: pointer;
+}
+
+/* red line */
+.red-line {
+  position: absolute;
+  left: 0;
+  top: 50%;               /* في نص الإيد */
+  transform: translateY(-50%);
+  width: 55%;
+  height: 8px;            /* نفس سمك الصورة */
+  background: linear-gradient(
+    to left,
+    #8b0000,
+    rgba(139, 0, 0, 0.4),
+    transparent
+  );
+  z-index: 1;             /* 👈 ورا الإيد */
+}
+
+
+/* responsive */
+@media (max-width: 992px) {
+  .app-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .badge {
+    display: none;
+  }
+
+  .red-line {
+    width: 100%;
+  }
+}
+/* /////////////////////////////////////////////// */
+/* CTA Section */
+.cta-section {
+  padding: 100px 0;
+  direction: rtl;
+}
+
+/* Title */
+.cta-title {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Subtitle */
+.cta-subtitle {
+  color: #bfbfbf;
+  font-size: 28px;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+/* Highlight numbers */
+.cta-subtitle .highlight {
+  color: #fff;
+  font-weight: 700;
+}
+
+.cta-subtitle .price {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Button */
+.cta-btn {
+  display: inline-block;
+  background: #e50914;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ff1e28;
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 30px;
+  }
+
+  .cta-subtitle {
+    font-size: 18px;
+  }
+}
+/* ///////////////////////////////// */
+/* ================= Footer ================= */
+
+.main-footer {
+  color: #fff;
+  padding: 30px 0 30px;
+  background-color: #1B1F1F;
+  position: relative;
+  z-index: 9999;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+
+/* ================= Columns ================= */
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #bfc6c6;
+}
+
+.footer-col a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+}
+
+/* ================= App Buttons ================= */
+
+.store-btn img {
+  width: 160px;
+  margin-bottom: 12px;
+}
+
+/* ================= Business CTA ================= */
+
+.highlight {
+  color: #ff5a3c;
+  margin-bottom: 18px;
+}
+
+.cta-footer-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid #ff5a3c;
+  color: #ff5a3c;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+  width: max-content;
+}
+
+.cta-footer-btn:hover {
+  background: #ff5a3c;
+  color: #000;
+}
+
+/* ================= Logo ================= */
+
+.footer-logo {
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ================= Bottom ================= */
+
+.footer-bottom {
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.socials a {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 25px;
+  opacity: 0.8;
+}
+
+.socials a:hover {
+  opacity: 1;
+}
+
+.footer-links {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-links a {
+  color: #aaa;
+  margin-left: 14px;
+}
+
+.footer-links .help {
+  color: #00aaff;
+}
+
+/* ================= Responsive ================= */
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .socials {
+    order: 2;
+  }
+}
