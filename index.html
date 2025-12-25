@@ -69,6 +69,33 @@
         </div>
       </div>
     </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+      <button class="close-menu" type="button">
+        <i class="fa-solid fa-times"></i>
+      </button>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white fw-bold" href="#">الدورات التدريبية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-bold" href="#">الخبراء</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-bold" href="#">برامج التعلم</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="btn btn-subscribe">اشترك</a>
+        </li>
+        <li class="nav-item mt-3">
+          <a href="#" class="text-white fw-bold text-decoration-none d-block mb-2">تسجيل دخول</a>
+          <a href="#" class="btn btn-register w-100">إنشاء حساب جديد</a>
+        </li>
+      </ul>
+    </div>
+    
     <!-- start hero  -->
     <header class="hero-section d-flex align-items-center">
       <div class="container">
@@ -105,8 +132,8 @@
           </div>
         </div>
 
-        <div class="row position-relative">
-          <button class="btn-carousel btn-prev" id="btnPrev">
+        <div class="row position-relative  carousel">
+          <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
 
@@ -296,7 +323,7 @@
             </div>
           </div>
 
-          <button class="btn-carousel btn-next" id="btnNext">
+          <button class="btn-carousel btn-next">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
         </div>
@@ -311,14 +338,15 @@
           </div>
         </div>
 
-        <div class="row position-relative">
-          <button class="btn-carousel btn-prev" id="btnPrev">
+        <div class="row position-relative carousel ">
+          <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
 
-          <div class="carousel-viewport" id="carouselViewport">
-            <div class="carousel-track" id="track">
-              <div class="course-item">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+             
+                <div class="course-item">
                 <div class="course-card">
                   <div class="card-image-wrapper">
                     <img src="assets/images/BoadCourse/course1.jpeg" class="card-img-top" alt="Course" />
@@ -344,6 +372,36 @@
                   </div>
                 </div>
               </div>
+
+              <div class="course-item">
+                <div class="course-card">
+                  <div class="card-image-wrapper">
+                    <img src="assets/images/BoadCourse/course2.jpeg" class="card-img-top" alt="من موظف إلى مدير" />
+                  </div>
+                  <div class="card-body">
+                    <div class="course-category d-flex justify-content-between">
+                      <p>مهارات التوظيف</p>
+                    </div>
+
+                    <h5 class="course-title">
+                      من موظف إلى مدير
+                    </h5>
+
+                    <div class="rating-wrapper pb-5">
+                      <i class="fa-regular fa-clock"></i>
+                      <span class="rating-count"> 1 ساعة 15 دقيقة</span>
+                    </div>
+
+                    <div class="instructor-name d-flex justify-content-between">
+                      <span>محمود مصطفى</span>
+                      <div class="book-mark">
+                        <i class="fa-regular fa-bookmark fs-5"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 
               <div class="course-item">
                 <div class="course-card">
@@ -396,12 +454,14 @@
                   </div>
                 </div>
               </div>
+              
+              
 
-            
+
             </div>
           </div>
 
-          <button class="btn-carousel btn-next" id="btnNext">
+          <button class="btn-carousel btn-next">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
         </div>
@@ -509,7 +569,7 @@
         <!-- Cards Groups -->
 
         <!-- ===== popular-1  ===== -->
-        <div class="cards-group active" id="popular-1">
+        <div class="cards-group active  carousel" id="popular-1">
           <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
@@ -647,7 +707,7 @@
         </div>
 
         <!-- ===== popular-2  ===== -->
-        <div class="cards-group" id="popular-2">
+        <div class="cards-group carousel" id="popular-2">
           <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
@@ -770,7 +830,7 @@
         </div>
 
         <!-- ===== popular-3  ===== -->
-        <div class="cards-group" id="popular-3">
+        <div class="cards-group carousel" id="popular-3">
           <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
@@ -897,7 +957,7 @@
         </div>
 
         <!-- ===== business-1 ===== -->
-        <div class="cards-group" id="business-1">
+        <div class="cards-group carousel" id="business-1">
           <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
@@ -1021,7 +1081,7 @@
         </div>
 
         <!-- =====  family-1 ===== -->
-        <div class="cards-group" id="family-1">
+        <div class="cards-group carousel" id="family-1">
           <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
@@ -1143,7 +1203,7 @@
         </div>
 
         <!-- ===== personal-1 ===== -->
-        <div class="cards-group" id="personal-1">
+        <div class="cards-group carousel" id="personal-1">
           <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
@@ -1267,7 +1327,7 @@
         </div>
 
         <!-- ===== arts-1 ===== -->
-        <div class="cards-group" id="arts-1">
+        <div class="cards-group carousel" id="arts-1">
           <button class="btn-carousel btn-prev">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
@@ -1583,14 +1643,14 @@
           <h2>تعرّف على خبراء المنتور</h2>
         </div>
 
-        <div class="experts-carousel">
-          <button class="experts-btn prev" id="expertsPrev">
+        <div class="experts-carousel carousel " >
+          <button class="btn-carousel btn-prev" >
             <i class="fa-solid fa-chevron-right"></i>
           </button>
 
           <!-- ✅ viewport -->
-          <div class="experts-viewport">
-            <div class="experts-track" id="expertsTrack">
+          <div class="carousel-viewport">
+            <div class="carousel-track" >
               <!-- Expert 1 -->
               <div class="expert-card">
                 <img src="assets/images/experts/Expert 1.png" alt="خالد الصاوي" />
@@ -1636,7 +1696,7 @@
             </div>
           </div>
 
-          <button class="experts-btn next" id="expertsNext">
+          <button class="experts-btn btn-next" >
             <i class="fa-solid fa-chevron-left"></i>
           </button>
         </div>
@@ -1900,83 +1960,83 @@
 
     <footer class="sec-bg">
       <div class="main-footer">
-       <div class="container">
+        <div class="container">
 
-    <div class="footer-grid">
-<!-- About -->
-      <div class="footer-col footer-right">
-        <div class="footer-logo">m</div>
+          <div class="footer-grid">
+            <!-- About -->
+            <div class="footer-col footer-right">
+              <div class="footer-logo">m</div>
 
-        <a href="#">المدونة</a>
-        <a href="#">عن المنتور</a>
-        <a href="#">أخبارنا</a>
-        <a href="#">الفريق</a>
-        <a href="#">انضم لفريق المنتور</a>
-        <a href="#">اتصل بنا</a>
+              <a href="#">المدونة</a>
+              <a href="#">عن المنتور</a>
+              <a href="#">أخبارنا</a>
+              <a href="#">الفريق</a>
+              <a href="#">انضم لفريق المنتور</a>
+              <a href="#">اتصل بنا</a>
+            </div>
+            <!-- Discover -->
+            <div class="footer-col">
+              <h4>اكتشف المزيد</h4>
+              <a href="#">دوراتنا التدريبية</a>
+              <a href="#">الدورات الأكثر شيوعًا</a>
+              <a href="#">أنظمة الاشتراك</a>
+              <a href="#">خبراء المنتور</a>
+              <a href="#">شركاء التعلم</a>
+            </div>
+            <!-- Business -->
+            <div class="footer-col">
+              <h4>المنتور للأعمال</h4>
+
+              <a href="#" class="footer-link highlight">انضم لخبراء المنتور</a>
+
+              <a href="#" class="cta-footer-btn">
+                درّب فريق عملك
+              </a>
+            </div>
+            <!-- App Download -->
+            <div class="footer-col">
+              <h4>حمّل التطبيق</h4>
+
+              <a href="#" class="store-btn">
+                <img src="assets/images/download/play-store-button.svg" alt="Google Play">
+              </a>
+
+              <a href="#" class="store-btn">
+                <img src="assets/images/download/app-store-button.svg" alt="App Store">
+              </a>
+            </div>
+
+
+
+
+
+
+
+          </div>
+
+
+
+        </div>
       </div>
-       <!-- Discover -->
-      <div class="footer-col">
-        <h4>اكتشف المزيد</h4>
-        <a href="#">دوراتنا التدريبية</a>
-        <a href="#">الدورات الأكثر شيوعًا</a>
-        <a href="#">أنظمة الاشتراك</a>
-        <a href="#">خبراء المنتور</a>
-        <a href="#">شركاء التعلم</a>
-      </div>
-         <!-- Business -->
-      <div class="footer-col">
-        <h4>المنتور للأعمال</h4>
-
-        <a href="#" class="footer-link highlight">انضم لخبراء المنتور</a>
-
-        <a href="#" class="cta-footer-btn">
-          درّب فريق عملك
-        </a>
-      </div>
-      <!-- App Download -->
-      <div class="footer-col">
-        <h4>حمّل التطبيق</h4>
-
-        <a href="#" class="store-btn">
-          <img src="assets/images/download/play-store-button.svg" alt="Google Play">
-        </a>
-
-        <a href="#" class="store-btn">
-          <img src="assets/images/download/app-store-button.svg" alt="App Store">
-        </a>
-      </div>
-
-   
-
-     
-
-      
-
-    </div>
-
-
-
-  </div>
-     </div>
       <!-- Bottom -->
-    <div class="footer-bottom ">
-            <div class="footer-links">
-        <a href="#">شروط الاستخدام</a>
-        <a href="#">سياسة الخصوصية</a>
-        <a href="#" class="help">مركز المساعدة</a>
-        <span>© 2025 المنتور</span>
-      </div>
-      <div class="socials">
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+      <div class="footer-bottom ">
+        <div class="footer-links">
+          <a href="#">شروط الاستخدام</a>
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#" class="help">مركز المساعدة</a>
+          <span>© 2025 المنتور</span>
+        </div>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
 
 
-    </div>
-</footer>
+      </div>
+    </footer>
 
   </main>
 
